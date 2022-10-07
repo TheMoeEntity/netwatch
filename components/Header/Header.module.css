@@ -7,7 +7,14 @@
     position: fixed;
     left: 0;
     z-index: 100;
-    top: 0;
+    top: -100%;
+    left: 0;
+    transition:top 1s ease, opacity 2s ease-out;
+    opacity: 0;
+}
+.header.animateIn {
+    top:0;
+    opacity: 1;
 }
 .hamburger {
     width: 25px;
@@ -33,18 +40,21 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    margin: 0 10px;
 }
 .header > div:nth-child(1), .header > div:nth-child(3) {
-    flex-grow: 1;
+    flex-grow: 0.9;
  
 }
 .header > div:nth-child(3) {
     display: flex;
     justify-content: flex-end;
     color: #c2c4cb !important;
+    flex-grow: 0.1;
 }
 .header > div:nth-child(2) {
     flex-grow: 10;
+    
 
 }
 .header > div:nth-child(1) > div {
@@ -64,6 +74,8 @@
     border: none;
     padding: 20px;
     color: #fff;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 .searchbar input::placeholder {
     color: #64686D;
@@ -74,4 +86,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 6px;
 }

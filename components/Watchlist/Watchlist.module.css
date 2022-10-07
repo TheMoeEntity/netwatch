@@ -13,8 +13,26 @@
 .Watchlist {
     width: 100%;
     background-color: #18181A;
+    display: flex;
+    flex-flow: column wrap;
 }
 .Watchlist h2 {
-    padding:20px  30px;
+    /* padding:20px  30px; */
     padding-bottom: 0;
+    float: left;
+}
+.Watchlist button {
+    float: right;
+    /* margin: 20px 30px; */
+    background: #262428;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 30px;
 }

@@ -7,9 +7,10 @@ export const Body = () => {
   return (
     <div className={styles.body}>
         <div className={styles.content}>
+          
             <TopRated />
-            <Watchlist />
-            <Watchlist />
+            <Watchlist title="New Movies" />
+            <Watchlist title="My Watchlist" />
         </div>
         <div className={styles.recommended}>
           <Recommended />

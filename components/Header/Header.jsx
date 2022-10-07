@@ -1,8 +1,14 @@
 import styles from './Header.module.css'
-
+import { animateIn } from '../../Helpers/helpers'
+import { useRef, useEffect } from 'react'
 export const Header = () => {
+
+    const header = useRef(null)
+    useEffect(()=> {
+        animateIn(header,styles.animateIn,500)
+    },[])
   return (
-    <div className={styles.header}>
+    <div ref={header} className={styles.header}>
 
         <div>
             <div className={styles.hamburger}>
